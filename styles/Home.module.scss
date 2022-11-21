@@ -1,0 +1,41 @@
+.container {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .hero {
+    margin-top: 5vh;
+    width: 100%;
+    max-width: 1400px;
+    border-radius: 50px;
+    height: 75vh;
+    background-color: #fcf9e0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      color: #274D76;
+      text-align: center;
+    }
+    .mainImage {
+      margin-top: 50px;
+    }
+  }
+  .gallery {
+    margin-top: 10vh;
+    display: grid;
+    width: 100%;
+    grid-gap: 3vw;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+  }
+  .imgCont {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 15px;
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+}
