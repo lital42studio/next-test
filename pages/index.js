@@ -11,11 +11,12 @@ export default function Home() {
     {src: '/home-assets/file4.svg', alt: 'Some image'},
     {src: '/home-assets/file5.svg', alt: 'Some image'},
     {src: '/home-assets/file6.png', alt: 'Some image'},
+    {src: '/home-assets/file7.png', alt: 'Some image'},
   ]
 
   let { scrollY } = useScroll()
   let y = useTransform(scrollY, [0,250], ['0%', '50%'])
-  
+
   return (
     <div className={styles.container}>
       <motion.div className={styles.hero} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{duration: 1, delay: 0.2}} style={{y}}>
