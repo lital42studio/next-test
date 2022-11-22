@@ -21,7 +21,9 @@ export default function Home() {
     <div className={styles.container}>
       <motion.div className={styles.hero} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{duration: 1, delay: 0.2}} style={{y}}>
         <motion.h1 initial={{y: 20, opacity: 0}} animate={{y: 0, opacity: 1}} transition={{delay: 1.5}}>Hello There!</motion.h1>
-        <Image className={styles.mainImage} src="/home-assets/file1.svg" width="1000" height="400" alt="/"  />
+        <div className={styles.mainImage}>
+        <Image src="/home-assets/file1.svg" width="1000" height="400" alt="/"  />
+        </div>
       </motion.div>
       <div className={styles.gallery}>
         {images.map((image, index) => {
