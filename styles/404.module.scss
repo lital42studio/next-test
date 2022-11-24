@@ -1,0 +1,12 @@
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  a {
+    transition: all 250ms;    
+    text-decoration: underline;
+    &:hover {
+      color: salmon;
+    }
+  }
+}

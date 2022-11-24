@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 import { motion, useScroll, useTransform, useInView } from 'framer-motion'
+import HeadSeo from '../components/HeadSeo'
 
 
 export default function Home() {
@@ -18,6 +19,8 @@ export default function Home() {
   let y = useTransform(scrollY, [0,250], ['0%', '50%'])
 
   return (
+    <>
+    <HeadSeo title="homepage" description="This is my amazing homepage!" />
     <div className={styles.container}>
       <motion.div className={styles.hero} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{duration: 1, delay: 0.2}} style={{y}}>
         <motion.h1 initial={{y: 20, opacity: 0}} animate={{y: 0, opacity: 1}} transition={{delay: 1.5}}>Hello There!</motion.h1>
@@ -37,5 +40,6 @@ export default function Home() {
         })}
       </div>
     </div>
+    </>
   )
 }

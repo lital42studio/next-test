@@ -1,5 +1,6 @@
 import { useRouter } from "next/router"
 import { useState, useEffect } from "react"
+import HeadSeo from "../../components/HeadSeo"
 import styles from "../../styles/Coins.module.scss"
 
 
@@ -25,6 +26,8 @@ const CoinDetails = () => {
 
 
   return ( 
+    <>
+    <HeadSeo title={data.coin.name} description={`information about ${data.coin.name}`} />
     <div className={styles.coinDetails}>
       <img src={data.coin.icon} alt={coinId} />
       <h3>{data.coin.name}</h3>
@@ -55,6 +58,7 @@ const CoinDetails = () => {
         </div>
       </div>
     </div>
+    </>
    );
 }
 

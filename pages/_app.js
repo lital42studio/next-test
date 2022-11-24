@@ -5,11 +5,9 @@ import '../styles/globals.scss'
 function MyApp({ Component, pageProps }) {
   return (
     <>
-    <Head>
-      <title>{Component.title}</title>
-    </Head>
       <Layout>
         <Component {...pageProps} />
+        {console.log(Component.title)}
       </Layout>
     </>
   )

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import HeadSeo from '../components/HeadSeo';
 import styles from '../styles/Contact.module.scss'
 
 const Contact = () => {
@@ -28,6 +29,8 @@ const Contact = () => {
   }
 
   return ( 
+    <>
+    <HeadSeo title="Contact-Us" description="Keep in touch" />
     <div className={styles.container}>
       <h1>Contact Us</h1>
       <form onSubmit={(event) => handleForm(event)}>
@@ -36,6 +39,7 @@ const Contact = () => {
         <input type="submit" name="full-name" value="Send" />
       </form>
     </div>
+    </>
    );
 }
  

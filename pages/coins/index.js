@@ -3,6 +3,7 @@ import styles from "../../styles/Coins.module.scss"
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
 import CoinPreview from "../../components/CoinPreview";
+import HeadSeo from "../../components/HeadSeo";
 
 const CoinList = ({coinData}) => {
 
@@ -10,7 +11,10 @@ const CoinList = ({coinData}) => {
     <div className={styles.coinsWrapper}>
       {coinData.coins.map((coin) => {
         return(
-          <CoinPreview coin={coin} key={coin.symbol} />
+          <>
+            <HeadSeo title="Coins lobby" description="See our coins" />
+            <CoinPreview coin={coin} key={coin.symbol} />
+          </>
         )
       })}
     </div>
