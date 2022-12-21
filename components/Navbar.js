@@ -8,6 +8,8 @@ const Navbar = () => {
         <Link href="/">Home</Link>
         <Link href="/about">About</Link>
         <Link href="/coins">Coins</Link>
+        <Link href="/three-js">Three.js</Link>
+        <Link href="/scroll-3d">3D Scroll</Link>
         <Link href="/contact">Contact Us</Link>
       </div>
     </nav>
